@@ -25,7 +25,6 @@
 
 ###
 
-![Snake animation](https://github.com/Erick-C418/Erick-C418/blob/output/github-snake.svg)
 
 
 
