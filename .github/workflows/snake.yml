@@ -1,14 +1,16 @@
-name: Generate Snake Game
+name: Generate Snake Animation
 
 on:
   schedule:
-    # Executa diariamente às 00:00 UTC
-    - cron: "0 0 * * *"
+    # Executa a cada 6 horas
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v2
@@ -22,7 +24,6 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add dist/github-snake.svg
           git commit -m "Atualizar animação do Snake Game"
-          git push
-
+          git push origin HEAD:output
