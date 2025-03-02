@@ -25,8 +25,8 @@ jobs:
         uses: LuciNyan/pixel-profile/action@v1.0.0
         with:
           outputs: |
-            dist/github-stats?username=Erick-C418&screen_effect=false&theme=fuji&dithering=true&hide=avatar
-            dist/github-stats-dark?username=Erick-C418&screen_effect=true&pixelate_avatar=false
+            dist/github-stats?username=Erickify&screen_effect=false&theme=fuji&dithering=true&hide=avatar
+            dist/github-stats-dark?username=Erickify&screen_effect=true&pixelate_avatar=false
 
       # Publica os arquivos gerados na branch de saída (output)
       - name: push github-contribution-grid-snake.svg to the output branch
